@@ -34,7 +34,7 @@
 //  */
 
 
-// //conversion fron datatype to boolean
+// // //conversion fron datatype to boolean
 // let number=1;
 // let valNumber=Boolean(number);
 // console.log(valNumber)
@@ -91,7 +91,7 @@
 
 
 //comparison operator <,>,<=,>=,==,!=
-console.log(2>1)
+// console.log(2>1)
 
 // console.log("2">1)//ye galat tarike h dono datatype sAME HONE chaiye comp operator use krte time
 
@@ -105,7 +105,7 @@ console.log(2>1)
 
 
 //=== (check strictly value + datatype)
-console.log("2"==2)
-console.log("2"===2);
+// console.log("2"==2)
+// console.log("2"===2);
 
 
