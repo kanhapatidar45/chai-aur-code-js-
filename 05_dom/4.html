@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>edit or remove dom element</title>
+</head>
+<body style="background-color: aqua; color: black;">
+    <ul class="lang">
+       <li>js</li>
+    </ul>
+    <script>
+        //element creation in dom
+        function addLanguage(languagename){
+          const li=  document.createElement('li')
+          li.innerHTML=`${languagename}`
+          document.querySelector('.lang').appendChild(li)
+
+        }
+        addLanguage("python")
+        addLanguage("c++")
+        //better approach
+        function addOptiLanguage(language){
+         const li=document.createElement('li')
+            li.appendChild(document.createTextNode(language))
+          document.querySelector('.lang').appendChild(li)
+        }
+        addOptiLanguage("golang")
+
+
+        //edit
+        //1st tarika
+
+    //    const secondLang= document.querySelector("li:nth-child(2)")
+    // const newli=  document.createElement('li')
+    // secondLang.innerHTML="nacho"
+
+     //2nd tarika
+    // const secondLang= document.querySelector("li:nth-child(2)")
+    // const newli=  document.createElement('li')
+    // newli.textContent="mojo"
+    // secondLang.replaceWith(newli)
+
+    //3rd tarika
+    const secondLang= document.querySelector("li:nth-child(2)")
+    secondLang.outerHTML='<li>guys</>'
+    
+
+
+    //remove element
+    const lastLang=document.querySelector('li:last-child')
+   lastLang.remove()
+    </script>
+</body>
+</html>
