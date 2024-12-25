@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>closure</title>
+    <button id="orange">orange</button>
+    <button id="green">green</button>
+</head>
+<body>
+
+    
+</body>
+<script>
+
+//     //lexical scoping
+//     //function ke ander inner function access kr sakta h bhai bhai function nhi 
+//     function init(){
+//         let name="monzila"
+//         function dispalyName(){
+//             let secret="my123"
+//             console.log("innerone",name)
+//         }
+//         function innerTwo(){
+//             console.log("innertwo",name)
+//             console.log(secret)
+//         }
+//         dispalyName()
+//         innerTwo()
+
+//     }
+//     init()
+
+
+
+//closure
+function makeFunc(){
+    const name="monzila"
+    function dispalyName(){
+        console.log(name)
+
+    }
+    return dispalyName
+}
+const myFunc=makeFunc()
+myFunc()
+
+</script>
+
+<script>
+// document.getElementById('orange').onclick=function(){
+//     document.body.style.backgroundColor=`orange`
+// }
+// document.getElementById('green').onclick=function(){
+//     document.body.style.backgroundColor=`green`
+// }
+
+function clickHandler(color){
+//     document.body.style.backgroundColor=`${color}`
+   return function(){
+     document.body.style.backgroundColor=`${color}`
+
+   }
+ }
+document.getElementById('orange').onclick=clickHandler("orange")
+document.getElementById('green').onclick=clickHandler("green")
+</script>
+</html>
